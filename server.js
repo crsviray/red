@@ -8,19 +8,16 @@ var app = express();
 app.set('port', (process.env.PORT || 5000));
 //use static files
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(('/js'),express.static(path.join(__dirname, 'assets/js')));
-app.use(('/img'),express.static(path.join(__dirname, 'assets/images')));
-app.use(('/css'),express.static(path.join(__dirname, 'assets/css')));
-app.use(('/fonts'),express.static(path.join(__dirname, 'assets/fonts')));
+app.use(('/js'),express.static(path.join(__dirname, '/assets/js')));
+app.use(('/img'),express.static(path.join(__dirname, '/assets/images')));
+app.use(('/css'),express.static(path.join(__dirname, '/assets/css')));
+app.use(('/fonts'),express.static(path.join(__dirname, '/assets/fonts')));
 //express routes
 app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, 'assets/index.html'));
+  res.sendFile(path.join(__dirname, '/assets/index.html'));
 });
 app.get('/about', function(req, res){
-  res.sendFile(path.join(__dirname, 'assets/generic.html'));
-});
-app.get('*', function(req, res){
-  res.status(404).sendFile(path.join(__dirname, 'views/404.html'));
+  res.sendFile(path.join(__dirname, '/assets/generic.html'));
 });
 //express server listen
 var server = app.listen(app.get('port'), function(){
