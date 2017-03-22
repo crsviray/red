@@ -7,9 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crsviray/redjumpsuit.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crsviray/redjumpsuit/issues"
+  },
+  "homepage": "https://github.com/crsviray/redjumpsuit#readme",
   "dependencies": {
     "express": "^4.15.2"
   }
